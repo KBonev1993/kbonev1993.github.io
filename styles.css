@@ -65,7 +65,7 @@ header .nav-links li a {
 
 /* Highlight Active Button */
 header .nav-links li a.active {
-    color: #ff7f7f;
+    color: #ffffff; /* Highlight color changed to white */
     text-decoration: underline;
 }
 
