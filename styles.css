@@ -6,9 +6,9 @@ body {
     color: #f0f0f0;
 }
 
-/* Background wallpaper for home page only */
+/* Home Page Background */
 body.home-page {
-    background: url('images/map.jpg') no-repeat center center fixed; /* Path to map.jpg */
+    background: url('images/map.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
@@ -20,14 +20,14 @@ body.home-page::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(15, 15, 23, 0.9); /* Dark overlay for readability */
+    background: rgba(15, 15, 23, 0.9); /* Transparent overlay */
     z-index: 0;
-    opacity: 0.9; /* Adjust for subtle visibility of the map */
+    opacity: 0.9;
 }
 
-header, .hero-section, footer {
-    position: relative;
-    z-index: 1; /* Ensures content appears above the background */
+/* Default Background for Other Pages */
+body.default-page {
+    background: #0f0f17;
 }
 
 /* Header */
@@ -60,8 +60,16 @@ header .nav-links li a {
     font-weight: bold;
     color: #7f7fff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+/* Highlight Active Button */
+header .nav-links li a.active {
+    color: #ff7f7f;
+    text-decoration: underline;
+}
+
+/* Change color on hover */
 header .nav-links li a:hover {
     color: #9f9fff;
 }
@@ -83,6 +91,20 @@ header .nav-links li a:hover {
 
 .hero-content p {
     font-size: 1.25rem;
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem;
+    background: rgba(24, 24, 48, 0.9); /* Semi-transparent section background */
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.section h2 {
+    text-align: center;
+    color: #7f7fff;
 }
 
 /* Footer */
