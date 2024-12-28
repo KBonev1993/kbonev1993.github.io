@@ -1,22 +1,38 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0f0f17;
     color: #f0f0f0;
 }
 
-a {
-    color: #7f7fff;
-    text-decoration: none;
+/* Background wallpaper for home page only */
+body.home-page {
+    background: url('images/map.jpg') no-repeat center center fixed; /* Path to map.jpg */
+    background-size: cover;
+    position: relative;
 }
 
-a:hover {
-    color: #9f9fff;
+body.home-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 23, 0.9); /* Dark overlay for readability */
+    z-index: 0;
+    opacity: 0.9; /* Adjust for subtle visibility of the map */
 }
 
+header, .hero-section, footer {
+    position: relative;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Header */
 header {
-    background: #0a0a14;
+    background: rgba(10, 10, 20, 0.9); /* Semi-transparent header */
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -42,11 +58,17 @@ header .nav-links {
 header .nav-links li a {
     font-size: 1rem;
     font-weight: bold;
+    color: #7f7fff;
+    text-decoration: none;
 }
 
+header .nav-links li a:hover {
+    color: #9f9fff;
+}
+
+/* Hero Section */
 .hero-section {
     height: 100vh;
-    background: linear-gradient(135deg, #1f1f3f, #0f0f27);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,26 +83,12 @@ header .nav-links li a {
 
 .hero-content p {
     font-size: 1.25rem;
-    color: #f0f0f0;
 }
 
-.section {
-    padding: 2rem;
-    background: #181830;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.section h2 {
-    text-align: center;
-    color: #7f7fff;
-}
-
+/* Footer */
 footer {
     text-align: center;
-    background: #0a0a14;
+    background: rgba(10, 10, 20, 0.9); /* Semi-transparent footer */
     padding: 1rem;
-    margin-top: 1rem;
     color: #7f7fff;
 }
