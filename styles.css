@@ -93,6 +93,20 @@ header .nav-links li a:hover {
     font-size: 1.25rem;
 }
 
+/* Section Styles */
+.section {
+    padding: 2rem;
+    background: rgba(24, 24, 48, 0.9); /* Semi-transparent section background */
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.section h2 {
+    text-align: center;
+    color: #7f7fff;
+}
+
 /* Footer */
 footer {
     text-align: center;
