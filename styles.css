@@ -87,14 +87,14 @@ header .nav-links li a:hover {
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ffffff; /* Make the text white */
-    font-weight: bold; /* Bold for more emphasis */
+    color: #7f7fff; /* Main color for "I'm Kristiyan Bonev" (blueish purple) */
+    font-weight: bold; /* Bold for emphasis */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Add shadow for contrast */
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    color: #ffffff; /* Make the description text white */
+    color: #ffffff; /* White color for the description */
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4); /* Add subtle shadow */
 }
 
