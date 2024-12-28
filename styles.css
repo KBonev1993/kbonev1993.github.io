@@ -25,11 +25,6 @@ body.home-page::before {
     opacity: 0.9;
 }
 
-/* Default Background for Other Pages */
-body.default-page {
-    background: #0f0f17;
-}
-
 /* Header */
 header {
     background: rgba(10, 10, 20, 0.9); /* Semi-transparent header */
@@ -38,14 +33,9 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align the navigation to the right */
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-header .logo {
-    font-size: 1.5rem;
-    color: #fff;
 }
 
 header .nav-links {
@@ -96,20 +86,6 @@ header .nav-links li a:hover {
     font-size: 1.25rem;
     color: #ffffff; /* White color for the description */
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4); /* Add subtle shadow */
-}
-
-/* Section Styles */
-.section {
-    padding: 2rem;
-    background: rgba(24, 24, 48, 0.9); /* Semi-transparent section background */
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.section h2 {
-    text-align: center;
-    color: #7f7fff;
 }
 
 /* Footer */
