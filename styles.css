@@ -4,6 +4,13 @@ body {
     margin: 0;
     padding: 0;
     color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+main {
+    flex: 1; /* This makes sure the content section takes all available space */
 }
 
 /* Home Page Background */
@@ -114,4 +121,6 @@ footer {
     background: rgba(10, 10, 20, 0.9); /* Semi-transparent footer */
     padding: 1rem;
     color: #7f7fff;
+    position: relative;
+    margin-top: auto; /* Push the footer to the bottom of the page */
 }
