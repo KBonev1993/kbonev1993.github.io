@@ -25,6 +25,25 @@ body.home-page::before {
     opacity: 0.9;
 }
 
+/* Other Pages Background */
+body:not(.home-page) {
+    background: url('images/lock.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body:not(.home-page)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 23, 0.9); /* Transparent overlay */
+    z-index: 0;
+    opacity: 0.9;
+}
+
 /* Header */
 header {
     background: rgba(10, 10, 20, 0.9); /* Semi-transparent header */
