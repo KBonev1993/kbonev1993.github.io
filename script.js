@@ -13,13 +13,23 @@ document.querySelectorAll('a').forEach(anchor => {
     });
 });
 
-// Add a custom cursor effect (e.g., purple ring when hovering over links)
+// Add a custom cursor effect (e.g., glowing purple ring)
+const cursorRing = document.createElement('div');
+cursorRing.classList.add('cursor-ring');
+document.body.appendChild(cursorRing);
+
+document.addEventListener('mousemove', (e) => {
+    cursorRing.style.left = `${e.pageX}px`;
+    cursorRing.style.top = `${e.pageY}px`;
+    cursorRing.style.opacity = 1;
+});
+
 document.querySelectorAll('a').forEach(anchor => {
-    anchor.addEventListener('mouseover', function () {
-        document.body.style.cursor = 'url(images/purple-ring.svg), pointer'; // Use a custom cursor image
+    anchor.addEventListener('mouseover', () => {
+        cursorRing.style.borderColor = '#8A2BE2'; // Set ring color to purple
     });
 
-    anchor.addEventListener('mouseout', function () {
-        document.body.style.cursor = 'default'; // Reset cursor back to default
+    anchor.addEventListener('mouseout', () => {
+        cursorRing.style.borderColor = '#fff'; // Reset to white when not hovering
     });
 });
