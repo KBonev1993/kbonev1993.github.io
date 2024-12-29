@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - Kristiyan Bonev</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="left">Kristiyan Bonev</div>
-            <div class="right">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="certificates.html">Certificates</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contacts</a>
-            </div>
-        </div>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>Contact Me</h1>
-            <p>If you'd like to get in touch, feel free to reach out!</p>
-            <ul>
-                <li>Email: kristiyan.bonev@example.com</li>
-                <li>LinkedIn: <a href="#">LinkedIn Profile</a></li>
-                <li>GitHub: <a href="#">GitHub Profile</a></li>
-            </ul>
-        </section>
-    </main>
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>If you'd like to get in touch with me, feel free to drop a message below!</p>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Kristiyan Bonev. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 My Portfolio</p>
+  </footer>
 
-    <div class="custom-cursor"></div>
+  <script src="script.js"></script>
 </body>
 </html>
