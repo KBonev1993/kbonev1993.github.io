@@ -109,7 +109,7 @@ section {
 
 /* Cursor ring effect */
 html, body {
-  cursor: none; /* Hide the default mouse cursor globally */
+  cursor: pointer; /* Default cursor set to pointer (hand) */
 }
 
 .cursor-ring {
@@ -122,9 +122,14 @@ html, body {
   z-index: 9999; /* Make sure cursor ring is always on top */
 }
 
-/* Show default cursor on interactive elements like links */
+/* Set default cursor to pointer on interactive elements (links, buttons, etc.) */
 a, button, input, select, textarea {
-  cursor: pointer; /* Show hand cursor */
+  cursor: pointer; /* Ensure pointer cursor for clickable elements */
+}
+
+/* Set default cursor to auto for non-interactive elements (background, text, etc.) */
+body, .hero, section {
+  cursor: default; /* Default arrow cursor for non-clickable areas */
 }
 
 footer {
