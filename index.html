@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .badge {
+      margin-right: auto; /* Push the badge to the left */
+    }
+    .badge iframe {
+      height: 60px; /* Ensure enough space for the badge */
+      width: 120px; /* Adjust width for better visibility */
+    }
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px; /* Spacing between nav items */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,9 +31,9 @@
       <ul>
         <li class="badge">
           <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=97812" 
-                  style="border:none; height: 40px; width: 100px;"></iframe>
+                  style="border:none;"></iframe>
         </li>
-        <li><a href="index.html">Home1</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="certificates.html">Certificates</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
