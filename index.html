@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kristiyan Bonev - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="left">Kristiyan Bonev</div>
-            <div class="right">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="certificates.html">Certificates</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contacts</a>
-            </div>
-        </div>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my work and experience.</p>
-        </section>
-    </main>
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my journey, skills, and achievements.</p>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Kristiyan Bonev. All rights reserved.</p>
-    </footer>
-
-    <div class="custom-cursor"></div>
-    
-    <script>
-        // Custom Mouse Cursor
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.pageX}px`;
-            cursor.style.top = `${e.pageY}px`;
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
