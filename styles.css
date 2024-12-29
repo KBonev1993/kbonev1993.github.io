@@ -9,15 +9,15 @@ body, html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative;
 }
 
 /* Apply a darker overlay on the background image */
 .background {
-    position: relative;
+    position: relative; /* Ensure the background overlay is correctly applied */
     height: 100%;
 }
 
+/* Dark overlay to darken the background image */
 .background::before {
     content: '';
     position: absolute;
@@ -25,8 +25,14 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background overlay to make text stand out */
-    z-index: 1; /* Darken the background but keep it behind content */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background overlay */
+    z-index: 1; /* Keep overlay below content but above the background image */
+}
+
+/* Ensure the text remains visible above the overlay */
+.hero, .about-section, .certificates-section, .portfolio-section, .contact-section {
+    position: relative; /* Ensure content remains above the overlay */
+    z-index: 2; /* Content above overlay */
 }
 
 /* Cursor Effect */
@@ -34,7 +40,7 @@ body, html {
     position: fixed;
     width: 50px;
     height: 50px;
-    border: 2px solid #8A2BE2;
+    border: 2px solid #8A2BE2; /* Customize the ring color */
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -43,6 +49,7 @@ body, html {
     transition: opacity 0.2s ease-in-out;
 }
 
+/* Cursor Animation (for the hover effect) */
 @keyframes pulse {
     0% {
         transform: translate(-50%, -50%) scale(1);
@@ -58,6 +65,11 @@ body, html {
     }
 }
 
+/* Ensure the cursor ring is visible on mouse hover */
+body:hover .cursor-ring {
+    opacity: 1;
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -69,7 +81,7 @@ body, html {
     border-radius: 8px;
     display: flex;
     justify-content: flex-end;
-    z-index: 1000; /* Ensure navbar is above all other content */
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -111,8 +123,6 @@ body, html {
     text-align: center;
     color: #fff;
     padding: 120px 20px;
-    z-index: 10; /* Ensure this content is above the dark overlay */
-    position: relative; /* Ensure it's above the background and overlay */
 }
 
 .hero h1 {
