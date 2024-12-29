@@ -107,7 +107,7 @@ section {
   text-align: center;
 }
 
-/* Cursor ring effect */
+/* Cursor ring effect (always visible with reduced opacity) */
 html {
   cursor: none;
 }
@@ -123,8 +123,12 @@ body {
   pointer-events: none;
   transition: width 0.15s, height 0.15s;
   transform: translate(-50%, -50%);
+  width: 30px;  /* size of the ring */
+  height: 30px;
+  opacity: 0.5; /* Make the ring more transparent */
 }
 
+/* Footer styling */
 footer {
   text-align: center;
   padding: 20px;
