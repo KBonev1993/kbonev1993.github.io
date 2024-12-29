@@ -36,7 +36,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px;
+  padding: 10px 0; /* Adjusted padding for consistent height */
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
@@ -44,11 +44,21 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: flex-end; /* Aligns the nav bar text to the right */
+  height: 60px; /* Set consistent height */
 }
 
 nav ul li {
   margin: 0 20px;
+  height: 100%; /* Ensures items match the nav bar height */
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+
+nav ul li.badge iframe {
+  height: 40px; /* Set consistent badge height */
+  width: 120px; /* Adjust badge width */
 }
 
 nav ul li a {
@@ -84,11 +94,10 @@ nav ul li a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 60px); /* Subtract nav bar height */
   text-align: center;
   color: white;
   padding: 50px;
-  margin-top: 80px; /* to avoid overlap with nav */
 }
 
 .hero h1 {
@@ -120,12 +129,12 @@ html, body {
   transition: width 0.15s, height 0.15s;
   transform: translate(-50%, -50%);
   z-index: 9999; /* Make sure cursor ring is always on top */
-  opacity: 0.5; /* Slight transparency on the ring *
+  opacity: 0.5; /* Slight transparency on the ring */
 }
 
 /* Set default cursor to pointer on interactive elements (links, buttons, etc.) */
 a, button, input, select, textarea {
-  cursor: default; /* Ensure pointer cursor for clickable elements */
+  cursor: pointer; /* Ensure pointer cursor for clickable elements */
 }
 
 /* Set default cursor to auto for non-interactive elements (background, text, etc.) */
