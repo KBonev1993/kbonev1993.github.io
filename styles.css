@@ -125,7 +125,7 @@ html, body {
 
 /* Set default cursor to pointer on interactive elements (links, buttons, etc.) */
 a, button, input, select, textarea {
-  cursor: pointer; /* Ensure pointer cursor for clickable elements */
+  cursor: default; /* Ensure pointer cursor for clickable elements */
 }
 
 /* Set default cursor to auto for non-interactive elements (background, text, etc.) */
