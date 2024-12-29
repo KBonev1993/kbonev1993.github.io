@@ -7,9 +7,12 @@ body {
     background: url('images/map.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    min-height: 100vh; /* Ensure the body takes full viewport height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Make the body a flex container */
 }
 
+/* Blackout effect from top to bottom */
 body::before {
     content: "";
     position: absolute;
@@ -24,6 +27,7 @@ body::before {
 main {
     position: relative;
     z-index: 1;
+    flex: 1; /* Make main content take up available space */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,6 +90,7 @@ header .nav-links li a:hover {
     color: #7f7fff;
 }
 
+/* Footer */
 footer {
     text-align: center;
     background: rgba(10, 10, 20, 0.9);
@@ -93,4 +98,7 @@ footer {
     color: #7f7fff;
     position: relative;
     margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
 }
