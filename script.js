@@ -1,9 +1,14 @@
-// Example script for smooth scroll effect on navigation links
-document.querySelectorAll('.navbar a').forEach(anchor => {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        if (this.hash !== "") {
+            e.preventDefault();
+
+            const targetElement = document.querySelector(this.hash);
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
     });
 });
