@@ -45,10 +45,15 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Aligns the nav bar text to the right */
+  justify-content: space-between; /* Reserve space for badge and links */
   margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
+  padding: 0 20px; /* Padding for left and right edges */
   height: 60px; /* Set consistent height */
+}
+
+nav ul .badge-placeholder {
+  height: 40px; /* Placeholder height matching the badge */
+  width: 120px; /* Placeholder width matching the badge */
 }
 
 nav ul li {
