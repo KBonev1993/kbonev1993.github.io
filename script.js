@@ -12,3 +12,14 @@ document.querySelectorAll('a').forEach(anchor => {
         }
     });
 });
+
+// Add a custom cursor effect (e.g., purple ring when hovering over links)
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('mouseover', function () {
+        document.body.style.cursor = 'url(images/purple-ring.svg), pointer'; // Use a custom cursor image
+    });
+
+    anchor.addEventListener('mouseout', function () {
+        document.body.style.cursor = 'default'; // Reset cursor back to default
+    });
+});
