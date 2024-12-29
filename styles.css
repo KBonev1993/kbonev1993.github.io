@@ -24,7 +24,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* Darker background overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background overlay to make text stand out */
     z-index: -1; /* Ensure the overlay is behind the content */
 }
 
