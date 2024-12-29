@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Contact - Kristiyan Bonev</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="background">
-    <div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
 
-        <section class="contact-section">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-                <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+<body>
+    <!-- Cursor Ring -->
+    <div class="cursor-ring"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Background with dark overlay -->
+    <div class="background">
+        <header class="hero">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me via the form below.</p>
+        </header>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
 </body>
+
 </html>
