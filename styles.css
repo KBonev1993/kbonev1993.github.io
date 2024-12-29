@@ -46,14 +46,16 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Aligns the nav bar text to the right */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
   height: 60px; /* Set consistent height */
 }
 
 nav ul li {
-  margin: 0 20px;
-  height: 100%; /* Ensures items match the nav bar height */
+  margin: 0 20px; /* Consistent spacing between links */
+  height: 100%; /* Match nav bar height */
   display: flex;
-  align-items: center; /* Vertically align items */
+  align-items: center; /* Vertically align text */
 }
 
 nav ul li.badge iframe {
