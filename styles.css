@@ -7,7 +7,7 @@
 
 /* Body and Global Styling */
 body, html {
-    height: 100%;
+    height: 100%;  /* Full height */
     background-color: #f3f2f9; /* Fallback background color */
     color: #15141A;
     font-family: studiofeixen-variable, studiofeixen, Arial, Helvetica, sans-serif;
@@ -25,11 +25,11 @@ body, html {
 /* Background Image with Blackout Effect */
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;  /* Use fixed position to ensure it covers the whole page */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Cover full height of the viewport */
     background-image: url('images/map.jpg');
     background-size: cover;
     background-position: center;
@@ -101,25 +101,9 @@ header {
 /* Main Content Styling */
 main {
     padding: 20px;
-    margin-top: 60px;
     z-index: 1; /* Ensure main content is above background */
     position: relative;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-h1 {
-    color: #15141A;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    margin-bottom: 10px;
+    flex: 1;  /* Ensure the main content area fills the remaining space */
 }
 
 /* Hover and Focus Transitions */
@@ -140,9 +124,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: static; /* Let the footer be at the bottom */
     width: 100%;
-    bottom: 0;
 }
 
 /* Responsive Design */
@@ -162,7 +145,6 @@ footer {
     }
 
     footer {
-        position: static;
         padding: 20px 0;
     }
 }
