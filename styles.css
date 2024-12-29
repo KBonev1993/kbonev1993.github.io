@@ -5,14 +5,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%; /* Ensure the page takes up the entire height */
+  overflow: hidden; /* Prevent scrolling */
+}
+
 body {
   font-family: 'Arial', sans-serif;
   color: white;
   background: url('images/map.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Dark tint overlay to ensure visibility of text on all pages */
