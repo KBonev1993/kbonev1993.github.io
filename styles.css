@@ -1,150 +1,116 @@
-/* General reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and Global Styling */
-body, html {
-    height: 100%;  /* Full height */
-    background-color: #f3f2f9; /* Fallback background color */
-    color: #15141A;
-    font-family: studiofeixen-variable, studiofeixen, Arial, Helvetica, sans-serif;
-    letter-spacing: -.015em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1em;
-    overflow-x: hidden;
-    position: relative; /* Make sure background is positioned relative to body */
-    display: flex;
-    flex-direction: column; /* Ensure body content fills the screen */
-    min-height: 100vh; /* Full viewport height */
-}
-
-/* Background Image with Blackout Effect */
-body::before {
-    content: '';
-    position: fixed;  /* Use fixed position to ensure it covers the whole page */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Cover full height of the viewport */
-    background-image: url('images/map.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Darkens the image */
-    z-index: -1; /* Ensure the background is behind the content */
-}
-
-/* Custom Mouse Pointer */
+/* Body */
 body {
-    cursor: none; /* Hide default cursor */
-}
-
-.custom-cursor {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: #FF5733;  /* Cursor color */
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s ease;
-    z-index: 9999;
-}
-
-/* Text Hover Effects */
-h1, h2, h3, p, a {
-    transition: all 0.3s ease-in-out;
-}
-
-h1:hover, h2:hover, h3:hover, p:hover, a:hover {
-    color: #003eaa;
-    transform: scale(1.1);
-}
-
-/* Navbar Styling */
-header {
-    background-color: rgba(0, 96, 223, 0.8); /* Semi-transparent navbar */
+    font-family: 'Orbitron', sans-serif;
+    background: url('images/map.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
-    padding: 10px 0;
-    z-index: 100;
-    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Navbar */
 .navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    gap: 20px;
 }
 
-.navbar .left {
-    font-size: 24px;
-    font-weight: bold;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.navbar .right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+.navbar li {
     font-size: 18px;
-    transition: color 0.3s;
 }
 
-.navbar .right a:hover {
-    color: #003eaa;
+.navbar a {
+    color: #8A2BE2; /* Purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
     text-decoration: underline;
 }
 
-/* Main Content Styling */
-main {
-    padding: 20px;
-    z-index: 1; /* Ensure main content is above background */
-    position: relative;
-    flex: 1;  /* Ensure the main content area fills the remaining space */
-}
-
-/* Hover and Focus Transitions */
-a {
-    text-decoration: none;
-    color: #0060df;
-    transition: color 0.3s, transform 0.3s;
-}
-
-a:hover {
-    color: #003eaa;
-    transform: scale(1.05);
-}
-
-/* Footer Styling */
-footer {
-    background-color: rgba(0, 62, 170, 0.8); /* Semi-transparent footer */
-    color: white;
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 10px;
-    position: static; /* Let the footer be at the bottom */
-    width: 100%;
+    margin-top: 100px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
 
-    .navbar .right a {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
 
-    main {
-        padding: 15px;
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
     }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    footer {
-        padding: 20px 0;
-    }
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* About Section */
+.about-section, .certificates-section, .contact-section, .portfolio-section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Form Styling */
+form input[type="text"],
+form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+form input[type="submit"] {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #6A1EB6;
 }
