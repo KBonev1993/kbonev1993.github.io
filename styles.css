@@ -6,8 +6,8 @@
 }
 
 html, body {
-  height: 100%; /* Ensure the page takes up the entire height */
-  overflow: hidden; /* Prevent scrolling */
+  height: 100%;
+  overflow: hidden; /* Disable scrolling */
 }
 
 body {
@@ -107,13 +107,9 @@ section {
   text-align: center;
 }
 
-/* Cursor ring effect (always visible with reduced opacity) */
-html {
-  cursor: none;
-}
-
-body {
-  cursor: none;
+/* Cursor ring effect */
+html, body {
+  cursor: none; /* Hide the default mouse cursor */
 }
 
 .cursor-ring {
@@ -123,12 +119,9 @@ body {
   pointer-events: none;
   transition: width 0.15s, height 0.15s;
   transform: translate(-50%, -50%);
-  width: 30px;  /* size of the ring */
-  height: 30px;
-  opacity: 0.5; /* Make the ring more transparent */
+  z-index: 9999; /* Make sure cursor ring is always on top */
 }
 
-/* Footer styling */
 footer {
   text-align: center;
   padding: 20px;
