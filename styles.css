@@ -12,8 +12,37 @@ body, html {
 }
 
 .background {
-    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+    background-color: rgba(0, 0, 0, 0.6); /* Darken the background */
     height: 100%;
+}
+
+/* Cursor Effect */
+.cursor-ring {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #8A2BE2;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
 }
 
 /* Navbar */
