@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Kristiyan Bonev</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kristiyan Bonev - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Cursor Ring -->
-    <div class="cursor-ring"></div>
+    <header>
+        <div class="navbar">
+            <div class="left">Kristiyan Bonev</div>
+            <div class="right">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my work and experience.</p>
+        </section>
+    </main>
 
-    <!-- Background with dark overlay -->
-    <div class="background">
-        <header class="hero">
-            <h1>Welcome to My Futuristic Website</h1>
-            <p>Exploring the world of Cybersecurity & Cryptocurrency</p>
-        </header>
-    </div>
+    <footer>
+        <p>&copy; 2024 Kristiyan Bonev. All rights reserved.</p>
+    </footer>
 
-    <!-- Home Section -->
-    <section class="home-section">
-        <h2>Explore My Work and Experience</h2>
-        <p>Discover more about me, my portfolio, certifications, and projects.</p>
-    </section>
-
+    <div class="custom-cursor"></div>
+    
+    <script>
+        // Custom Mouse Cursor
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
 </body>
-
 </html>
