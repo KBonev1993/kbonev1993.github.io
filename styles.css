@@ -7,48 +7,27 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure body takes at least full viewport height */
-}
-
-main {
-    flex: 1; /* This makes sure the content section takes all available space */
-}
-
-/* Home Page Background */
-body.home-page {
     background: url('images/map.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
 
-body.home-page::before {
+body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(15, 15, 23, 0.9); /* Transparent overlay */
+    background: rgba(15, 15, 23, 0.8); /* Transparent overlay */
     z-index: 0;
     opacity: 0.9;
 }
 
-/* Other Pages Background */
-body:not(.home-page) {
-    background: url('images/lock.jpg') no-repeat center center fixed;
-    background-size: cover;
+main {
+    flex: 1; /* This makes sure the content section takes all available space */
     position: relative;
-}
-
-body:not(.home-page)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 15, 23, 0.6); /* More transparent overlay */
-    z-index: 0;
-    opacity: 0.75; /* Adjusted opacity for a more subtle effect */
+    z-index: 1; /* Content above the background overlay */
 }
 
 /* Header */
@@ -79,21 +58,19 @@ header .nav-links li a {
     transition: color 0.3s;
 }
 
-/* Highlight Active Button */
 header .nav-links li a.active {
-    color: #ffffff; /* Highlight color changed to white */
+    color: #ffffff;
     text-decoration: underline;
 }
 
-/* Change color on hover */
 header .nav-links li a:hover {
     color: #9f9fff;
 }
 
-/* Content Sections */
+/* Content Section */
 .content-section {
     padding: 3rem 2rem;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for content sections */
+    background-color: rgba(0, 0, 0, 0.7);
     color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -105,22 +82,11 @@ header .nav-links li a:hover {
     color: #7f7fff;
 }
 
-.content-section ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.content-section ul li {
-    margin: 1rem 0;
-    font-size: 1.25rem;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    background: rgba(10, 10, 20, 0.9); /* Semi-transparent footer */
+    background: rgba(10, 10, 20, 0.9);
     padding: 1rem;
     color: #7f7fff;
     position: relative;
-    margin-top: auto; /* Push the footer to the bottom of the page */
+    margin-top: auto;
 }
