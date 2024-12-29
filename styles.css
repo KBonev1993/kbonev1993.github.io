@@ -24,7 +24,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Aligns the nav bar text to the right */
 }
 
 nav ul li {
