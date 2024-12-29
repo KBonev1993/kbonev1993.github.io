@@ -7,11 +7,28 @@ body {
     background: url('images/map.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh; /* Ensure the body takes full viewport height */
 }
 
-/* Removed the blackout overlay */
-/* Deleted the `body::before` styles */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Full blackout effect */
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Header */
 header {
@@ -60,7 +77,7 @@ header .nav-links li a:hover {
     max-width: 800px;
     margin: auto;
     box-sizing: border-box;
-    background: transparent; /* No dark background */
+    background: transparent; /* Keep the content background transparent */
     text-align: center;
 }
 
