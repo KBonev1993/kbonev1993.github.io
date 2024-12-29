@@ -8,7 +8,7 @@
 /* Body and Global Styling */
 body, html {
     height: 100%;
-    background-color: #f3f2f9;
+    background-color: #f3f2f9; /* Fallback background color */
     color: #15141A;
     font-family: studiofeixen-variable, studiofeixen, Arial, Helvetica, sans-serif;
     letter-spacing: -.015em;
@@ -16,8 +16,10 @@ body, html {
     -moz-osx-font-smoothing: grayscale;
     font-size: 1em;
     overflow-x: hidden;
-    transition: all 0.25s ease;
-    position: relative; /* Added for the background overlay */
+    position: relative; /* Make sure background is positioned relative to body */
+    display: flex;
+    flex-direction: column; /* Ensure body content fills the screen */
+    min-height: 100vh; /* Full viewport height */
 }
 
 /* Background Image with Blackout Effect */
@@ -32,7 +34,7 @@ body::before {
     background-size: cover;
     background-position: center;
     opacity: 0.5; /* Darkens the image */
-    z-index: -1; /* Makes sure the overlay is behind content */
+    z-index: -1; /* Ensure the background is behind the content */
 }
 
 /* Custom Mouse Pointer */
@@ -44,7 +46,7 @@ body {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: #FF5733;  /* Changed cursor color to bright red-orange */
+    background-color: #FF5733;  /* Cursor color */
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -64,7 +66,7 @@ h1:hover, h2:hover, h3:hover, p:hover, a:hover {
 
 /* Navbar Styling */
 header {
-    background-color: rgba(0, 96, 223, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 96, 223, 0.8); /* Semi-transparent navbar */
     color: white;
     padding: 10px 0;
     z-index: 100;
@@ -100,7 +102,8 @@ header {
 main {
     padding: 20px;
     margin-top: 60px;
-    z-index: 1;
+    z-index: 1; /* Ensure main content is above background */
+    position: relative;
 }
 
 section {
@@ -133,7 +136,7 @@ a:hover {
 
 /* Footer Styling */
 footer {
-    background-color: rgba(0, 62, 170, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 62, 170, 0.8); /* Semi-transparent footer */
     color: white;
     text-align: center;
     padding: 10px;
