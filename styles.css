@@ -11,9 +11,21 @@ body, html {
     background-attachment: fixed;
 }
 
+/* Apply a darker overlay on the background image */
 .background {
-    background-color: rgba(0, 0, 0, 0.9); /* Darken the background */
+    position: relative; /* Make the background overlay work */
     height: 100%;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background overlay */
+    z-index: -1; /* Ensure the overlay is behind the content */
 }
 
 /* Cursor Effect */
