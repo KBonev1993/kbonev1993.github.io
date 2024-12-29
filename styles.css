@@ -109,7 +109,7 @@ section {
 
 /* Cursor ring effect */
 html, body {
-  cursor: pointer; /* Default cursor set to pointer (hand) */
+  cursor: default; /* Default cursor set to pointer (hand) */
 }
 
 .cursor-ring {
